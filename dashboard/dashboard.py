@@ -9,6 +9,9 @@ import plotly.graph_objects as go                  # Membuat grafik interaktif
 from plotly.subplots import make_subplots          # Membuat grafik interaktif
 from PIL import Image                              # Membuka gambar
 
+hour_df = pd.read_csv("data/hour.csv")
+day_df = pd.read_csv("data/day.csv")
+
 # Konfigurasi judul halaman streamlit 
 st.set_page_config(page_title="Analisis Penyewaan Sepeda", layout="wide")
 
