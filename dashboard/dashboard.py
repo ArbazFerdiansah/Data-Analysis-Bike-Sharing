@@ -153,7 +153,7 @@ def main():
             st.metric("Rata-rata Recency", f"{r_weekend.mean():.1f} hari")
     
     # Menampilkan teks dalam ukuran kecil
-    st.caption('Copyright (c) Arbaz 2024')
+    st.caption('Copyright (c) Arbaz Ferdiansah 2024')
 
 # Memastikan fungsi main() dijalankan jika skrip dieksekusi  
 if __name__ == "__main__":
