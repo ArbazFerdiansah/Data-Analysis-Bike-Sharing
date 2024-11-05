@@ -48,8 +48,8 @@ def main():
     
     # Membaca data dari file "clustering_results.xls" dan "rfm_results.xls"
     # Tanpa penanganan kesalahan
-    clustering_df = pd.read_csv('clustering_results.xls')
-    rfm_df = pd.read_csv('rfm_results.xls')
+    clustering_df = pd.read_excel('clustering_results.xls')
+    rfm_df = pd.read_excel('rfm_results.xls')
     
     # Membuat dua tab untuk navigasi clustering dan RFM
     tab1, tab2 = st.tabs(["Analisis Clustering", "Analisis RFM"])
