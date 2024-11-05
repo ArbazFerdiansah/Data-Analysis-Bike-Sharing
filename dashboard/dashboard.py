@@ -36,8 +36,7 @@ def main():
     # Membuat sidebar 
     with st.sidebar:
         # Menampilkan foto bike sharing
-        image = Image.open("bike_sharing.webp")
-        st.image(image, use_column_width=True)
+        st.image("https://raw.githubusercontent.com/ArbazFerdiansah/desktop-tutorial/refs/heads/main/bike_sharing.webp?token=GHSAT0AAAAAACYPLNACXCHFB6QUCCHCHGZWZZKIC5A", use_column_width=True)
         
         # Menampilkan teks
         st.title("Analisis Penyewaan Sepeda")
