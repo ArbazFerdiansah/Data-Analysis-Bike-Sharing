@@ -47,9 +47,8 @@ def main():
     st.title("Dashboard Analisis Penyewaan Sepeda 🚲")    
     
     # Membaca data dari file "clustering_results.xls" dan "rfm_results.xls"
-    # Ubah jalur file di sini sesuai dengan lokasi file Anda
-    clustering_df = pd.read_csv('path_to_your_directory/clustering_results.xls')  # Ganti path dengan lokasi file
-    rfm_df = pd.read_csv('path_to_your_directory/rfm_results.xls')  # Ganti path dengan lokasi file
+    clustering_df = pd.read_csv('clustering_results.xls')
+    rfm_df = pd.read_csv('rfm_results.xls')
 
     # Membuat dua tab untuk navigasi clustering dan RFM
     tab1, tab2 = st.tabs(["Analisis Clustering", "Analisis RFM"])
