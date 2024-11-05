@@ -8,7 +8,7 @@ import plotly.express as px                        # Membuat grafik interaktif
 import plotly.graph_objects as go                  # Membuat grafik interaktif
 from plotly.subplots import make_subplots          # Membuat grafik interaktif
 from PIL import Image                              # Membuka gambar
-from pathlib import Path
+from pathlib import Path                           # Membuat path file
 
 # Konfigurasi judul halaman streamlit 
 st.set_page_config(page_title="Analisis Penyewaan Sepeda", layout="wide")
@@ -37,7 +37,7 @@ def main():
     # Membuat sidebar 
     with st.sidebar:
         # Menampilkan foto bike sharing
-        st.image("https://raw.githubusercontent.com/ArbazFerdiansah/desktop-tutorial/refs/heads/main/bike_sharing.webp?token=GHSAT0AAAAAACYPLNACXCHFB6QUCCHCHGZWZZKIC5A", use_column_width=True)
+        st.image("https://raw.githubusercontent.com/ArbazFerdiansah/bike_sharing/refs/heads/main/bike_sharing.webp", use_column_width=True)
         
         # Menampilkan teks
         st.title("Analisis Penyewaan Sepeda")
@@ -47,14 +47,13 @@ def main():
     # Membuat judul dashboard
     st.title("Dashboard Analisis Penyewaan Sepeda 🚲")    
     
-    # Membaca data dari file "clustering_results.xls" dan "rfm_results.xls"
-    # Define paths relative to the root of the repository
-    root_dir = Path(__file__).resolve().parent
+    # Menentukan path relatif dari root repository
+    root_dir = Path(__file__).resolve().parent 
     clustering_path = root_dir / "clustering_results.xls"
     rfm_path = root_dir / "rfm_results.xls"
 
-    # Load the files
-    clustering_df = pd.read_csv(clustering_path)
+    # Membaca file
+    clustering_df = pd.read_csv(clustering_path) 
     rfm_df = pd.read_csv(rfm_path)
     
     # Membuat dua tab untuk navigasi clustering dan RFM
