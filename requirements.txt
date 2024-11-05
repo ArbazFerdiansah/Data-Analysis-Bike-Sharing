@@ -3,6 +3,6 @@ pandas==2.2.3
 seaborn==0.13.2
 matplotlib==3.8.0
 scikit-learn==1.2.2
-Pillow==10.4.0
+PIL==10.4.0
 plotly==5.24.1
-streamlit
+streamlit==1.30.0
