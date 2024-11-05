@@ -47,9 +47,10 @@ def main():
     st.title("Dashboard Analisis Penyewaan Sepeda 🚲")    
     
     # Membaca data dari file "clustering_results.xls" dan "rfm_results.xls"
+    # Tanpa penanganan kesalahan
     clustering_df = pd.read_csv('clustering_results.xls')
     rfm_df = pd.read_csv('rfm_results.xls')
-
+    
     # Membuat dua tab untuk navigasi clustering dan RFM
     tab1, tab2 = st.tabs(["Analisis Clustering", "Analisis RFM"])
     
@@ -78,7 +79,6 @@ def main():
         for cluster in range(3):
             cluster_data = data_cluster[data_cluster['cluster'] == cluster]
             with eval(f"col{cluster+1}"):
-
                 st.metric(
                     label=f"Cluster {cluster}",                                          # Setiap cluster
                     value=f"{cluster_data['cnt'].mean():.0f} sepeda",                    # Rata-rata jumlah sepeda tiap cluster
