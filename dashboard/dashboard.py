@@ -47,8 +47,8 @@ def main():
     st.title("Dashboard Analisis Penyewaan Sepeda 🚲")    
     
     # Menyimpan path atau lokasi dua file yang berada di dalam folder dashboard
-    clustering_path = "dashboard/clustering_results.xls"
-    rfm_path = "dashboard/rfm_results.xls"
+    clustering_path = "dashboard/clustering_results.csv"
+    rfm_path = "dashboard/rfm_results.csv"
 
     # Membaca data dari file yang path-nya telah ditentukan
     clustering_df = pd.read_csv(clustering_path) 
