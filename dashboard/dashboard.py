@@ -46,11 +46,11 @@ def main():
     # Membuat judul dashboard
     st.title("Dashboard Analisis Penyewaan Sepeda 🚲")    
     
-    # Menentukan path relatif dari root repository
+    # Menyimpan path atau lokasi dua file yang berada di dalam folder dashboard
     clustering_path = "dashboard/clustering_results.xls"
     rfm_path = "dashboard/rfm_results.xls"
 
-    # Membaca file
+    # Membaca data dari file yang path-nya telah ditentukan
     clustering_df = pd.read_csv(clustering_path) 
     rfm_df = pd.read_csv(rfm_path)
     
