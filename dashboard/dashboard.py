@@ -7,8 +7,7 @@ from sklearn.cluster import KMeans                 # Pemrosesan data untuk clust
 import plotly.express as px                        # Membuat grafik interaktif
 import plotly.graph_objects as go                  # Membuat grafik interaktif
 from plotly.subplots import make_subplots          # Membuat grafik interaktif
-from PIL import Image                              # Membuka gambar
-from pathlib import Path                           # Membuat path file
+from PIL import Image                              # Membuka gambar                          # Membuat path file
 
 # Konfigurasi judul halaman streamlit 
 st.set_page_config(page_title="Analisis Penyewaan Sepeda", layout="wide")
@@ -48,9 +47,8 @@ def main():
     st.title("Dashboard Analisis Penyewaan Sepeda 🚲")    
     
     # Menentukan path relatif dari root repository
-    root_dir = Path(__file__).resolve().parent 
-    clustering_path = root_dir / "clustering_results.xls"
-    rfm_path = root_dir / "rfm_results.xls"
+    clustering_path = "dashboard/clustering_results.xls"
+    rfm_path = "dashboard/rfm_results.xls"
 
     # Membaca file
     clustering_df = pd.read_csv(clustering_path) 
